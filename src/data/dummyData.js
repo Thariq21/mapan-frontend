@@ -166,4 +166,5 @@ export const navLinks = [
   { label: 'Eksplorasi Gaji', href: '#gaji' },
   { label: 'Forum', href: '#forum' },
   { label: 'Profil', href: '#profil' },
+  { label: 'Review CV', href: '#review-cv' },
 ];
