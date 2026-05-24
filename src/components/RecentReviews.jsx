@@ -135,7 +135,7 @@ export default function RecentReviews() {
               {/* Helpful */}
               <div className="mt-4 flex items-center gap-2 pt-5 border-t border-gray-100">
                 <button
-                  className="flex items-center gap-1.5 rounded-lg border border-gray-200 px-3 py-1.5 text-sm font-medium text-gray-500 transition-all hover:border-primary-300 hover:bg-primary-50 hover:text-primary-600"
+                  className="cursor-pointer flex items-center gap-1.5 rounded-lg border border-gray-200 px-3 py-1.5 text-sm font-medium text-gray-500 transition-all hover:border-primary-300 hover:bg-primary-50 hover:text-primary-600"
                   id={`review-helpful-${review.id}`}
                 >
                   <svg

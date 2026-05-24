@@ -130,7 +130,7 @@ export default function HeroSection() {
             {/* Search button */}
             <button
               type="submit"
-              className="flex items-center justify-center gap-2 rounded-xl bg-linear-to-r from-primary-600 to-primary-700 px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-primary-500/25 transition-all duration-300 hover:shadow-xl hover:shadow-primary-500/30 hover:-translate-y-0.5 active:translate-y-0 sm:rounded-full"
+              className="cursor-pointer flex items-center justify-center gap-2 rounded-xl bg-linear-to-r from-primary-600 to-primary-700 px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-primary-500/25 transition-all duration-300 hover:shadow-xl hover:shadow-primary-500/30 hover:-translate-y-0.5 active:translate-y-0 sm:rounded-full"
               id="hero-search-btn"
             >
               <svg

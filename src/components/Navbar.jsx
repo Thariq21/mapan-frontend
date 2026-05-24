@@ -41,7 +41,7 @@ export default function Navbar() {
         {/* CTA + Mobile Toggle */}
         <div className="flex items-center gap-3">
           <button
-            className="hidden md:inline-flex items-center gap-2 rounded-xl bg-linear-to-r from-primary-600 to-primary-700 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-primary-500/25 transition-all duration-300 hover:shadow-xl hover:shadow-primary-500/30 hover:-translate-y-0.5 active:translate-y-0"
+            className="cursor-pointer hidden md:inline-flex items-center gap-2 rounded-xl bg-linear-to-r from-primary-600 to-primary-700 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-primary-500/25 transition-all duration-300 hover:shadow-xl hover:shadow-primary-500/30 hover:-translate-y-0.5 active:translate-y-0"
             id="nav-cta-masuk"
           >
             Masuk
@@ -101,7 +101,7 @@ export default function Navbar() {
             </li>
           ))}
           <li role="none">
-            <button className="mt-2 w-full rounded-xl bg-linear-to-r from-primary-600 to-primary-700 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-primary-500/25">
+            <button className="cursor-pointer mt-2 w-full rounded-xl bg-linear-to-r from-primary-600 to-primary-700 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-primary-500/25">
               Masuk
             </button>
           </li>
