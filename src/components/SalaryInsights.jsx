@@ -1,15 +1,22 @@
-import { salaryInsights } from '../data/dummyData';
+import { salaryInsights } from "../data/dummyData";
 
 export default function SalaryInsights() {
   return (
-    <section id="gaji" className="py-16 md:py-24" aria-labelledby="salary-heading">
+    <section
+      id="gaji"
+      className="py-16 md:py-24"
+      aria-labelledby="salary-heading"
+    >
       <div className="container mx-auto px-4 md:px-8">
         {/* Section header */}
         <header className="mb-10 text-center">
           <span className="inline-block mb-3 rounded-full bg-primary-100 px-4 py-1 text-xs font-semibold uppercase tracking-wider text-primary-700">
             Data Terkini
           </span>
-          <h2 id="salary-heading" className="text-3xl font-bold text-gray-900 sm:text-4xl">
+          <h2
+            id="salary-heading"
+            className="text-3xl font-bold text-gray-900 sm:text-4xl"
+          >
             Wawasan <span className="gradient-text">Gaji</span>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-gray-500">
@@ -57,8 +64,18 @@ export default function SalaryInsights() {
                     </p>
                   </div>
                   <div className="flex items-center gap-1 rounded-lg bg-success-500/10 px-2.5 py-1 text-sm font-semibold text-success-500">
-                    <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
+                    <svg
+                      className="h-3.5 w-3.5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={2.5}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941"
+                      />
                     </svg>
                     {item.growth}
                   </div>

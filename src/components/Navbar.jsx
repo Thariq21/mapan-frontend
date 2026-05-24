@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { navLinks } from '../data/dummyData';
+import { useState } from "react";
+import { navLinks } from "../data/dummyData";
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -16,7 +16,7 @@ export default function Navbar() {
           className="flex items-center gap-2 text-2xl font-extrabold tracking-tight"
           id="nav-logo"
         >
-          <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-primary-600 to-primary-800 text-white text-lg shadow-lg shadow-primary-500/30">
+          <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-linear-to-br from-primary-600 to-primary-800 text-white text-lg shadow-lg shadow-primary-500/30">
             M
           </span>
           <span className="gradient-text">MAPAN</span>
@@ -30,7 +30,7 @@ export default function Navbar() {
                 href={link.href}
                 role="menuitem"
                 className="relative px-4 py-2 text-sm font-medium text-surface-600 rounded-lg transition-colors duration-200 hover:text-primary-600 hover:bg-primary-50"
-                id={`nav-link-${link.label.toLowerCase().replace(/\s/g, '-')}`}
+                id={`nav-link-${link.label.toLowerCase().replace(/\s/g, "-")}`}
               >
                 {link.label}
               </a>
@@ -41,7 +41,7 @@ export default function Navbar() {
         {/* CTA + Mobile Toggle */}
         <div className="flex items-center gap-3">
           <button
-            className="hidden md:inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-primary-600 to-primary-700 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-primary-500/25 transition-all duration-300 hover:shadow-xl hover:shadow-primary-500/30 hover:-translate-y-0.5 active:translate-y-0"
+            className="hidden md:inline-flex items-center gap-2 rounded-xl bg-linear-to-r from-primary-600 to-primary-700 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-primary-500/25 transition-all duration-300 hover:shadow-xl hover:shadow-primary-500/30 hover:-translate-y-0.5 active:translate-y-0"
             id="nav-cta-masuk"
           >
             Masuk
@@ -55,11 +55,25 @@ export default function Navbar() {
             aria-expanded={mobileOpen}
             id="nav-mobile-toggle"
           >
-            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <svg
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
               {mobileOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
               ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
               )}
             </svg>
           </button>
@@ -69,7 +83,7 @@ export default function Navbar() {
       {/* Mobile menu */}
       <div
         className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-          mobileOpen ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0'
+          mobileOpen ? "max-h-80 opacity-100" : "max-h-0 opacity-0"
         }`}
         id="nav-mobile-menu"
       >
@@ -87,7 +101,7 @@ export default function Navbar() {
             </li>
           ))}
           <li role="none">
-            <button className="mt-2 w-full rounded-xl bg-gradient-to-r from-primary-600 to-primary-700 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-primary-500/25">
+            <button className="mt-2 w-full rounded-xl bg-linear-to-r from-primary-600 to-primary-700 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-primary-500/25">
               Masuk
             </button>
           </li>

@@ -1,14 +1,18 @@
-export default function StarRating({ rating, maxStars = 5, size = 'md' }) {
+export default function StarRating({ rating, maxStars = 5, size = "md" }) {
   const sizeClasses = {
-    sm: 'h-3.5 w-3.5',
-    md: 'h-4 w-4',
-    lg: 'h-5 w-5',
+    sm: "h-3.5 w-3.5",
+    md: "h-4 w-4",
+    lg: "h-5 w-5",
   };
 
   const starSize = sizeClasses[size] || sizeClasses.md;
 
   return (
-    <div className="flex items-center gap-0.5" role="img" aria-label={`Rating ${rating} dari ${maxStars} bintang`}>
+    <div
+      className="flex items-center gap-0.5"
+      role="img"
+      aria-label={`Rating ${rating} dari ${maxStars} bintang`}
+    >
       {Array.from({ length: maxStars }, (_, i) => {
         const filled = i < Math.floor(rating);
         const half = !filled && i < rating;
@@ -16,8 +20,8 @@ export default function StarRating({ rating, maxStars = 5, size = 'md' }) {
         return (
           <svg
             key={i}
-            className={`${starSize} ${filled ? 'text-warning-500' : half ? 'text-warning-500' : 'text-surface-300'}`}
-            fill={filled || half ? 'currentColor' : 'none'}
+            className={`${starSize} ${filled ? "text-warning-500" : half ? "text-warning-500" : "text-surface-300"}`}
+            fill={filled || half ? "currentColor" : "none"}
             viewBox="0 0 24 24"
             stroke="currentColor"
             strokeWidth={filled || half ? 0 : 1.5}
