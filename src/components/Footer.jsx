@@ -32,8 +32,8 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Ulasan Perusahaan
+                <a href="#review-cv" className="hover:text-white transition-colors">
+                  Review CV (AI)
                 </a>
               </li>
               <li>

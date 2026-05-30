@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { navLinks } from "../data/dummyData";
 
-export default function Navbar() {
+export default function Navbar({ currentHash }) {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
@@ -24,18 +24,25 @@ export default function Navbar() {
 
         {/* Desktop links */}
         <ul className="hidden md:flex items-center gap-1" role="menubar">
-          {navLinks.map((link) => (
-            <li key={link.href} role="none">
-              <a
-                href={link.href}
-                role="menuitem"
-                className="relative px-4 py-2 text-sm font-medium text-surface-600 rounded-lg transition-colors duration-200 hover:text-primary-600 hover:bg-primary-50"
-                id={`nav-link-${link.label.toLowerCase().replace(/\s/g, "-")}`}
-              >
-                {link.label}
-              </a>
-            </li>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = currentHash === link.href || (link.href === '#beranda' && (!currentHash || currentHash === ''));
+            return (
+              <li key={link.href} role="none">
+                <a
+                  href={link.href}
+                  role="menuitem"
+                  className={`relative px-4 py-2 text-sm font-semibold rounded-lg transition-all duration-200 ${
+                    isActive
+                      ? "text-primary-600 bg-primary-50/80 shadow-xs"
+                      : "text-surface-600 hover:text-primary-600 hover:bg-primary-50"
+                  }`}
+                  id={`nav-link-${link.label.toLowerCase().replace(/\s/g, "-")}`}
+                >
+                  {link.label}
+                </a>
+              </li>
+            );
+          })}
         </ul>
 
         {/* CTA + Mobile Toggle */}
@@ -88,18 +95,25 @@ export default function Navbar() {
         id="nav-mobile-menu"
       >
         <ul className="space-y-1 px-4 pb-4 pt-1" role="menu">
-          {navLinks.map((link) => (
-            <li key={link.href} role="none">
-              <a
-                href={link.href}
-                role="menuitem"
-                onClick={() => setMobileOpen(false)}
-                className="block rounded-lg px-4 py-3 text-sm font-medium text-surface-700 hover:bg-primary-50 hover:text-primary-600 transition-colors"
-              >
-                {link.label}
-              </a>
-            </li>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = currentHash === link.href || (link.href === '#beranda' && (!currentHash || currentHash === ''));
+            return (
+              <li key={link.href} role="none">
+                <a
+                  href={link.href}
+                  role="menuitem"
+                  onClick={() => setMobileOpen(false)}
+                  className={`block rounded-lg px-4 py-3 text-sm font-semibold transition-all ${
+                    isActive
+                      ? "bg-primary-50 text-primary-600"
+                      : "text-surface-700 hover:bg-primary-50 hover:text-primary-600"
+                  }`}
+                >
+                  {link.label}
+                </a>
+              </li>
+            );
+          })}
           <li role="none">
             <button className="cursor-pointer mt-2 w-full rounded-xl bg-linear-to-r from-primary-600 to-primary-700 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-primary-500/25">
               Masuk

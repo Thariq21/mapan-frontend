@@ -1,4 +1,3 @@
-import React from 'react';
 
 const dummyTableData = [
   { id: 1, role: 'Software Engineer', location: 'Jakarta', salary: 'Rp 15.000.000', companies: 'Tokopedia, Gojek' },
