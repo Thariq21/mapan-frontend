@@ -1,0 +1,13 @@
+services:
+  react-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: mapan-frontend
+    restart: unless-stopped
+    networks:
+      - private-net
+
+networks:
+  private-net:
+    external: true
