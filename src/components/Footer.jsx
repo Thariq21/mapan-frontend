@@ -1,3 +1,5 @@
+import logo from "../images/logo-home.jpeg";
+
 export default function Footer() {
   return (
     <footer
@@ -9,10 +11,7 @@ export default function Footer() {
           {/* Brand column */}
           <div className="sm:col-span-2 lg:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-linear-to-br from-primary-500 to-primary-700 text-white font-extrabold text-sm shadow-lg shadow-primary-500/20">
-                M
-              </span>
-              <span className="text-xl font-extrabold text-white">MAPAN</span>
+              <img src={logo} alt="Logo MAPAN" className="w-24" />
             </div>
             <p className="text-sm leading-relaxed">
               Platform transisi karir terpercaya untuk profesional Indonesia.
@@ -32,7 +31,10 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#review-cv" className="hover:text-white transition-colors">
+                <a
+                  href="#review-cv"
+                  className="hover:text-white transition-colors"
+                >
                   Review CV (AI)
                 </a>
               </li>
