@@ -24,7 +24,7 @@ export default function EksplorasiGaji() {
     setIsLoading(true);
     setError(null);
     try {
-      const response = await axios.get('http://ds-mapan.thrqrhmn.my.id/api/salary-distribution', {
+      const response = await axios.get(`${import.meta.env.VITE_API_DS_URL}/api/salary-distribution`, {
         params: {
           job_title: queryJob || undefined,
           location: queryLoc || undefined
