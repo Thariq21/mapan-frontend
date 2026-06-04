@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { navLinks } from "../data/dummyData";
+import logo from "../images/logo-home.jpeg";
 
 export default function Navbar({ currentHash }) {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -11,21 +12,17 @@ export default function Navbar({ currentHash }) {
         aria-label="Navigasi utama"
       >
         {/* Logo */}
-        <a
-          href="#beranda"
-          className="flex items-center gap-2 text-2xl font-extrabold tracking-tight"
-          id="nav-logo"
-        >
-          <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-linear-to-br from-primary-600 to-primary-800 text-white text-lg shadow-lg shadow-primary-500/30">
-            M
-          </span>
-          <span className="gradient-text">MAPAN</span>
+        <a href="#beranda">
+          <img src={logo} alt="Logo MAPAN" className="w-24 cursor-pointer" />
         </a>
 
         {/* Desktop links */}
         <ul className="hidden md:flex items-center gap-1" role="menubar">
           {navLinks.map((link) => {
-            const isActive = currentHash === link.href || (link.href === '#beranda' && (!currentHash || currentHash === ''));
+            const isActive =
+              currentHash === link.href ||
+              (link.href === "#beranda" &&
+                (!currentHash || currentHash === ""));
             return (
               <li key={link.href} role="none">
                 <a
@@ -96,7 +93,10 @@ export default function Navbar({ currentHash }) {
       >
         <ul className="space-y-1 px-4 pb-4 pt-1" role="menu">
           {navLinks.map((link) => {
-            const isActive = currentHash === link.href || (link.href === '#beranda' && (!currentHash || currentHash === ''));
+            const isActive =
+              currentHash === link.href ||
+              (link.href === "#beranda" &&
+                (!currentHash || currentHash === ""));
             return (
               <li key={link.href} role="none">
                 <a
