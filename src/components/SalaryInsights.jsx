@@ -3,7 +3,7 @@ import { salaryInsights } from "../data/dummyData";
 export default function SalaryInsights() {
   return (
     <section
-      id="gaji"
+      id="wawasan-gaji"
       className="py-16 md:py-24"
       aria-labelledby="salary-heading"
     >
